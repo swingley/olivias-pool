@@ -12,7 +12,7 @@
   function makeTable(response) {
     // Flatten data into single array with all shows, most recent first.
     var allShows = response.data.map(function(s) {
-      return s.shows;
+      return s.shows.reverse();
     }).reduce(function(a, b) {
       return a.concat(b);
     });
@@ -24,7 +24,6 @@
       highs[y.year] = d3.max(y.shows.map(function(s) { return s.gap; }));
       lows[y.year] = d3.min(y.shows.map(function(s) { return s.gap; }));
     });
-    console.log('highs, lows', highs, lows);
 
     // For the table header.
     var columns = [
@@ -239,7 +238,7 @@
       .key(function(d) { return d.when; })
       .rollup(function(d) { return d[0].gap; })
       .map(allShows);
-    console.log('data', data);
+    // console.log('data', data);
 
     rects.filter(function(d) { return d in data; })
         .attr("class", function(d) { return "day " + color(data[d]); })
@@ -252,7 +251,6 @@
       var parentSvgRect = parentSvg(this).getBoundingClientRect();
       var left =( where[0] < 480 ) ? 730 : 150;
       var top = parentSvgRect.top + window.pageYOffset;
-      console.log('left', parentSvgRect.left, left);
       d3.select('.grid-tooltip').classed('hidden', false)
         .style("left", left + "px")
         .style("top", top + "px")
