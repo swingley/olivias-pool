@@ -1,0 +1,152 @@
+/* table */
+div.table-description {
+  color: #444;
+  line-height: 1.5em;
+  margin: 1em auto;
+  max-width: 600px;
+  width: 100%;
+}
+table {
+  border-collapse: collapse;
+  margin: 1em auto;
+  max-width: 600px;
+  width: 100%;
+}
+table tr td a {
+  color: #9E9E9E;
+}
+table tr.big-gap td a, span.blue {
+  color: #2196F3;
+}
+table tr.small-gap td a {
+  color: #111;
+}
+table tr td {
+  border: 0;
+}
+a {
+  text-decoration: none;
+}
+
+/* chart */
+#gaps-chart div.page-content {
+  font: 12px sans-serif;
+  margin: 1em auto;
+  width: 960px;
+}
+
+div.chart-description {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.5em;
+  margin: 1em auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+span.blue {
+  color: #2196F3;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis g.tick line, 
+.y.axis g.tick line {
+  display: none;
+}
+
+.bar {
+  fill: #9E9E9E;
+  stroke: none;
+}
+.bar.blue {
+  fill: #2196F3;
+}
+.bar.black {
+  fill: #111;
+}
+.bar:hover {
+  fill: #ff4081;
+}
+.chart-tooltip {
+  background: #fff;
+  box-shadow: 0 0 5px #ccc;
+  font-size: 1.2em;
+  left: 700px;
+  padding: 0.5em;
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+.chart-tooltip a {
+  color: #2196F3;
+  text-decoration: none;
+}
+.hidden {
+  display: none;
+}
+
+/* grid */
+#gaps-grid div.page-content {
+  font: 12px sans-serif;
+  margin: 1em auto;
+  width: 960px;
+}
+
+div.grid-description {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.5em;
+  margin: 1em auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+.day {
+
+  fill: #fff;
+  stroke: #eee;
+}
+
+.month {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.year-line {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 1px;
+}
+
+/* ColorBrewer 5-class multi-hue. */
+.pinks .q0-5 { stroke: #fff; fill: #feebe2; }
+.pinks .q1-5 { stroke: #fff; fill: #fbb4b9; }
+.pinks .q2-5 { stroke: #fff; fill: #f768a1; }
+.pinks .q3-5 { stroke: #fff; fill: #c51b8a; }
+.pinks .q4-5 { stroke: #fff; fill: #7a0177; }
+
+.q0-5, .q1-5, .q2-5, .q3-5, .q4-5 {
+  cursor: pointer;
+}
+
+.grid-tooltip {
+  background: #fff;
+  box-shadow: 0 0 5px #ccc;
+  font-size: 1.2em;
+  left: 700px;
+  padding: 0.5em;
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+.grid-tooltip a {
+  color: #3f51b5;
+  text-decoration: none;
+}

@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <!-- fixed tabs from:  http://www.getmdl.io/components/index.html#layout-section -->
+    
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <!-- Simple header with fixed tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+                mdl-layout--fixed-tabs">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Olivia's Pool:  Average Gaps for Phish Shows</span>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+          <a href="#gaps-table" class="mdl-layout__tab is-active">Table</a>
+          <a href="#gaps-chart" class="mdl-layout__tab">Chart</a>
+          <a href="#gaps-grid" class="mdl-layout__tab">Grid</a>
+        </div>
+      </header>
+
+      <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="gaps-table">
+          <div class="page-content">
+            <div class="table-description">
+              All shows from 1990 through early 2016 and their average song gap. Easy to find a specific date. Hard to spot any trends or outliers. <span class="blue">Blue</span> means largest gap of that year. Black means smallest. Click a date to see the setlist for that show or click a gap to see the gap chart for that show.
+            </div>
+          </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="gaps-chart">
+          <div class="page-content">
+            <div class="chart-description">
+              One chart per year from 1990 through early 2016. Each bar represents a show. The height of each bar is the average song gap for that show. Not as easy as a table to find specific dates. Easy to spot trends and outliers. <span class="blue">Blue</span> means largest gap of that year. Black means smallest.
+            </div>
+          </div> 
+          <div class="chart-tooltip hidden">look at me, a tooltip</div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="gaps-grid">
+          <div class="page-content">
+            <div class="grid-description">
+              One grid per year from 1990 through early 2016. Each square represents a show. The color represents average song gap for that show. Darker means bigger gap. Straightforward to find a specific date. Easy to spot trends and outliers. Most fun.
+            </div>
+          </div>
+          <div class="grid-tooltip hidden">look at me, a tooltip</div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Material Design Lite -->
+    <script src="//storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
